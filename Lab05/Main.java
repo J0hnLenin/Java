@@ -8,6 +8,18 @@ public class Main {
         Scanner in; 
         HolidayCamp camp;
 
+        // Заполнение случайными значениями
+        System.out.println();
+        camp = new HolidayCamp();
+        camp.print();
+
+        // // Заполнение из консоли
+        System.out.println();
+        in = new Scanner(System.in);
+        camp = new HolidayCamp(in, System.out);
+        System.out.println();
+        camp.print();
+
         // Заполнение из файла
         try {
             in = new Scanner(new File("file.txt"));
@@ -18,16 +30,25 @@ public class Main {
             System.out.print("File not found");
         }
 
-        // Заполнение случайными значениями
-        System.out.println();
-        camp = new HolidayCamp();
+        // Сортировка
+        camp.compareSort();
+        System.out.println("Сортировка по номеру:");
         camp.print();
 
-        // Заполнение из консоли
-        System.out.println();
-        in = new Scanner(System.in);
-        camp = new HolidayCamp(in, System.out);
-        System.out.println();
+        camp.comparatorSort();
+        System.out.println("Обратная сортировка по номеру:");
+        camp.print();
+
+        System.out.println("Сортировка по номеру:");
+        camp.lambdaSort();
+        camp.print();
+
+        System.out.println("Сортировка по пункту отправления:");
+        camp.departureSort();
+        camp.print();
+
+        System.out.println("Сортировка по пункту прибытия:");
+        camp.destinationSort();
         camp.print();
     }
 }

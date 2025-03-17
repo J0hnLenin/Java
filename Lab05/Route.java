@@ -1,10 +1,10 @@
 import java.io.PrintStream;
 import java.util.Scanner;
 
-public class Route{
-    public String pointOfDeparture;
-    public String pointOfDestination; 
-    public String number;
+public class Route implements Comparable<Route>{
+    private String pointOfDeparture;
+    private String pointOfDestination; 
+    private String number;
 
     Route(String pointOfDeparture, String pointOfDestination, String number){
         this.pointOfDeparture = pointOfDeparture;
@@ -47,5 +47,21 @@ public class Route{
             this.number, 
             this.pointOfDeparture, 
             this.pointOfDestination);
+    }
+
+    public int compareTo(Route r){
+        return this.getNumber().compareTo(r.getNumber());
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public String getPointOfDeparture() {
+        return pointOfDeparture;
+    }
+
+    public String getPointOfDestination() {
+        return pointOfDestination;
     }
 }
