@@ -18,7 +18,7 @@ public class Main6 {
         System.out.println();
         
         System.out.println("Дописали _abacaba к первым 3-м элементам:");
-        camps.stream().peek(x -> {x.title += "_abacaba";}).limit(3).forEach(System.out::println);
+        camps.stream().peek(x -> {x.setTitle(x.getTitle() + "_abacaba");}).limit(3).forEach(System.out::println);
         System.out.println();
         
         System.out.println("Вывели последние 3-м элемента:");
@@ -33,12 +33,12 @@ public class Main6 {
         System.out.println();
 
         System.out.print("Максимальное количество маршрутов: ");
-        System.out.println(camps.stream().map(x -> x.routes.length).max(Integer::compare).get());
+        System.out.println(camps.stream().map(x -> x.getRoutes().size()).max(Integer::compare).get());
         
         System.out.print("Есть ли кэмп, где больше 4 маршрутов: ");
-        System.out.println(camps.stream().anyMatch(x -> x.routes.length > 4));
+        System.out.println(camps.stream().anyMatch(x -> x.getRoutes().size() > 4));
 
         System.out.print("Правда ли, что количество маршрутов у каждого кэмпа меньше 4: ");
-        System.out.println(camps.stream().allMatch(x -> x.routes.length <= 4));
+        System.out.println(camps.stream().allMatch(x -> x.getRoutes().size() <= 4));
     }
 }

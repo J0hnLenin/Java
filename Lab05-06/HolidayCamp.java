@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class HolidayCamp {
     private String title;
-    private ArrayList<Route> routes = new ArrayList<>();
+    ArrayList<Route> routes = new ArrayList<>();
 
     HolidayCamp(String title, ArrayList<Route> routes){
         this.title = title;
@@ -83,5 +83,17 @@ public class HolidayCamp {
 
     public String toString(){
         return this.title;
+    }
+
+    public ArrayList<Route> getRoutes() {
+        return this.routes;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public void setTitle(String string) {
+        this.title = string;
     }
 }
