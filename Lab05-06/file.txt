@@ -2,10 +2,10 @@ SuperCamp
 3
 London
 New-York
-11K
+ZA-11
 Moscow
 London
-14P-110M
+AA-11
 Tobolsk
 Brazilia
-322
+AA-12
