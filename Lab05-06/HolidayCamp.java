@@ -49,4 +49,8 @@ public class HolidayCamp {
             route.print();
         }
     }
+
+    public String toString(){
+        return this.title;
+    }
 }
