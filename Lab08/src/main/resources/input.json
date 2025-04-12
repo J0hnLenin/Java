@@ -1,0 +1,17 @@
+[
+    {
+        "pointOfDeparture": "Eyjafjallaj0kull",
+        "pointOfDestination": "Vasyuki",
+        "number": "999"
+    },
+    {
+        "pointOfDeparture": "New York",
+        "pointOfDestination": "Vasyuki",
+        "number": "080"
+    },
+    {
+        "pointOfDeparture": "Vasyuki",
+        "pointOfDestination": "Miami",
+        "number": null
+    }
+]
