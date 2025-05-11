@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      title="msg://routeDetailView.title"
+      focusComponent="form">
+    <data>
+        <instance id="routeDc"
+                  class="com.company.project.entity.Route">
+            <fetchPlan extends="_base">
+                <property name="tourists" fetchPlan="_base"/>
+                <property name="camp" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="routeDl"/>
+            <collection id="touristsDc" property="tourists"/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <actions>
+        <action id="saveAction" type="detail_saveClose"/>
+        <action id="closeAction" type="detail_close"/>
+    </actions>
+    <layout>
+        <formLayout id="form" dataContainer="routeDc">
+            <responsiveSteps>
+                <responsiveStep minWidth="0" columns="1"/>
+                <responsiveStep minWidth="40em" columns="2"/>
+            </responsiveSteps>
+            <textField id="numberField" property="number"/>
+            <textField id="lenthField" property="lenth"/>
+            <entityPicker id="campField" property="camp">
+                <actions>
+                    <action id="entityLookupAction" type="entity_lookup"/>
+                    <action id="entityClearAction" type="entity_clear"/>
+                </actions>
+            </entityPicker>
+        </formLayout>
+        <h4 text="msg://com.company.project.entity/Route.tourists"/>
+        <hbox id="buttonsPanel" classNames="buttons-panel">
+            <button action="touristsDataGrid.addAction"/>
+            <button action="touristsDataGrid.excludeAction"/>
+        </hbox>
+        <dataGrid id="touristsDataGrid" dataContainer="touristsDc" width="100%" minHeight="20em">
+            <actions>
+                <action id="addAction" type="list_add"/>
+                <action id="excludeAction" type="list_exclude"/>
+            </actions>
+            <columns>
+                <column property="name"/>
+                <column property="birthDay"/>
+            </columns>
+        </dataGrid>
+        <hbox id="detailActions">
+            <button id="saveAndCloseButton" action="saveAction"/>
+            <button id="closeButton" action="closeAction"/>
+        </hbox>
+    </layout>
+</view>
