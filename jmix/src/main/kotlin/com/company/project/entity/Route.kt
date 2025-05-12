@@ -25,7 +25,7 @@ open class Route {
     @Positive
     @NumberFormat(pattern = "00.00")
     @Column(name = "LENTH")
-    var lenth: Float? = null
+    var length: Float? = null
 
     @JoinTable(
         name = "TOURIST_ROUTE_LINK",

@@ -10,9 +10,9 @@
                 <property name="tourists" fetchPlan="_base"/>
                 <property name="camp" fetchPlan="_base"/>
             </fetchPlan>
-            <loader id="routesDl" readOnly="true">
+            <loader id="routesDl">
                 <query>
-                    <![CDATA[select e from Route e]]>
+                    <![CDATA[select e from Route e  ]]>
                 </query>
             </loader>
         </collection>
@@ -51,7 +51,7 @@
             </actions>
             <columns resizable="true">
                 <column property="number"/>
-                <column property="lenth"/>
+                <column property="length"/>
                 <column property="camp"/>
             </columns>
         </dataGrid>

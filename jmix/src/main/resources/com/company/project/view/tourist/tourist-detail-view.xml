@@ -42,12 +42,12 @@
         </hbox>
         <dataGrid id="routesDataGrid" dataContainer="routesDc" width="100%" minHeight="20em">
             <actions>
-                <action id="addAction" type="list_add"/>
+                <action id="addAction" type="list_add" icon="PLUS"/>
                 <action id="excludeAction" type="list_exclude"/>
             </actions>
             <columns>
                 <column property="number"/>
-                <column property="lenth"/>
+                <column property="length"/>
             </columns>
         </dataGrid>
         <hbox id="detailActions">

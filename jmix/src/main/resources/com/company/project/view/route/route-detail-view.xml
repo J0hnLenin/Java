@@ -27,7 +27,7 @@
                 <responsiveStep minWidth="40em" columns="2"/>
             </responsiveSteps>
             <textField id="numberField" property="number"/>
-            <textField id="lenthField" property="lenth"/>
+            <textField id="lenthField" property="length"/>
             <entityPicker id="campField" property="camp">
                 <actions>
                     <action id="entityLookupAction" type="entity_lookup"/>
