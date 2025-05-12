@@ -7,10 +7,14 @@
                   class="com.company.project.entity.Tourist">
             <fetchPlan extends="_base">
                 <property name="camp" fetch="AUTO" fetchPlan="_base"/>
-                <property name="routes" fetch="AUTO" fetchPlan="_base"/>
+                <property name="routes" fetch="AUTO" fetchPlan="_base">
+                    <property name="tourists" fetchPlan="_base"/>
+                </property>
             </fetchPlan>
             <loader id="touristDl"/>
-            <collection id="routesDc" property="routes"/>
+            <collection id="routesDc"
+                        property="routes">
+            </collection>
         </instance>
     </data>
     <facets>
